@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <title>ToDo List</title>
+</head>
+<body>
+  <h1>ToDo List</h1>
+  
+  <form id="taskForm">
+    <label for="taskTitle">Título:</label>
+    <input type="text" id="taskTitle" required minlength="4" pattern="[^0-9]+" title="O título não pode conter apenas números">
+
+    <label for="taskDescription">Descrição:</label>
+    <textarea id="taskDescription" required minlength="20"></textarea>
+
+    <button type="button" onclick="addTask()">Adicionar Tarefa</button>
+  </form>
+
+  <h2>Tarefas</h2>
+  <ul id="taskList"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
